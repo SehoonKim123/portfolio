@@ -1,0 +1,314 @@
+@font-face{ 
+    font-family:'KoPubMedium'; 
+    src:url('../font/KoPubDotumMedium.ttf') format('truetype')
+}
+
+@font-face{ 
+    font-family:'seongsir'; 
+    src:url('../font/seongsir.ttf') format('truetype')
+}
+
+/* common */
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'KoPubMedium', 'sans-serif' ;
+    font-size: 1.1rem;
+    line-height: 1.5rem;
+    color: #4f4f4f;
+    cursor: default;
+}
+h2{
+    display: inline-block;
+    font-size: 1.6rem;
+    border-bottom: 3px solid #f28e00;
+    color: #235069;
+    margin-bottom: 50px;
+}
+a{
+    cursor: pointer;
+}
+.pencil{
+    font-family:'seongsir'; 
+    font-size: 2.4rem;
+    text-align: center;
+    color: #f28e00;
+}
+
+/* top nav */
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 95%;
+    height: 60px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #c5c5c5;
+    z-index: 9999;
+}
+nav .logo{
+    font-weight: 600;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #235069;
+}
+nav ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav ul li{
+    margin-left: 20px;
+    cursor: pointer;
+    position: relative;
+}
+nav ul li::before{
+    content: '';
+    width: 0%;
+    height: 1px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: #4f4f4f;
+    transition: all 0.3s;
+}
+nav ul li:hover::before{
+    width: 100%;
+}
+/* contents */
+section, footer{
+    width: 100%;
+    min-width: 768px;
+    min-height: 100vh;
+    position: relative;
+}
+
+/* header */
+.header{
+    background-color: #fffaef;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.header .title{
+    position: relative;
+    margin-top: -50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.header .title .tit{
+    z-index: 1;
+    width: 70%;
+}
+.header .title .line{
+    margin-top: -180px;
+    width: 80%;
+}
+.header .text{
+    text-align: center;
+    margin: 40px 0 30px;
+}
+
+.header .motto{
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+}
+.header .motto p{
+    text-align: right;
+    line-height: 1.1rem;
+    font-size: 0.8rem;
+}
+
+/* profile */
+
+.profile{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.profile article .profile_img{
+    width: 320px;
+    margin-right: 120px;
+}
+
+.profile article:nth-child(2){
+    margin: 0 60px;
+}
+.profile article:last-child{
+    margin-top: 80px;
+}
+
+.profile article table{
+    margin-bottom: 30px;
+}
+.profile article table th{
+    text-align: left;
+    vertical-align : top;
+    min-width: 120px;
+    font-size: 1.05rem;
+}
+.profile article table td, td a{
+    font-size: 0.95rem;
+}
+
+/* uni-activities */
+.uni-act {
+    background-color: #fffaef;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 600px;
+}
+
+.uni-act h3{
+    margin-bottom: 30px;
+}
+.uni-act div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.uni-act article:first-child{
+    text-align: left;
+}
+.uni-act article:last-child{
+    text-align: center;
+    margin-left: 80px;
+}
+.uni-act article table{
+    margin-bottom: 30px;
+}
+.uni-act article table th{
+    height: 40px;
+}
+.uni-act .subject_wrap{
+    flex-wrap: wrap;
+    max-width: 640px;
+}
+.uni-act .subject_wrap div{
+    width: 190px;
+    height: 50px;
+    margin: 5px;
+    font-size: 0.95rem;
+    border: 2px solid #ffc94c;
+    background: linear-gradient(
+        -45deg,
+        #fefefe 0 calc(50% - 10px),
+        #F5F5F5 calc(50% - 10px) calc(50% + 10px),
+        #ff9901 calc(50% + 10px) 100%
+    );
+    background-size: 250% 100%;
+    background-position: 100% 50%;
+    transition: all 0.3s;
+}
+  
+.uni-act .subject_wrap div:hover {
+    color: #f5f5f5;
+    background-position: 0% 50%;
+}
+
+
+/* capabilities */
+.capabilities {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+.capabilities h2{
+    margin-top: 100px;
+}
+.capabilities article{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+}
+
+.capabilities .doughnut-chart div{
+    position: relative;
+}
+.capabilities .doughnut-chart div p{
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    font-size: 0.95rem;
+    font-weight: 600;
+    line-height: 22px;
+}
+.capabilities .doughnut-chart div:first-child p{
+    transform: translate(-50%, -5%);
+}
+.capabilities .doughnut-chart div:last-child p{
+    transform: translate(-50%, 15%);
+}
+#myChart1, #myChart2{
+    width: 300px !important;
+    height: 300px !important;
+    cursor: pointer;
+}
+
+.capabilities .bar-chart{
+    flex-direction: column;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.capabilities .bar-chart > div{
+    margin-bottom: 70px;
+}
+.capabilities .chart-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.capabilities .bar-chart h3{
+    text-align: center;
+    margin-bottom: 30px;
+}
+.capabilities .chart-box p{
+    font-size: 0.92rem;
+    width: 130px;
+}
+.capabilities .chart-box span{
+    margin-left: 20px;
+    font-size: 0.8rem;
+}
+.capabilities .bar-chart .bar-bg{
+    width: 400px;
+    height: 8px;
+    background-color: #c5c5c5;
+    position: relative;
+}
+.capabilities .bar-chart .bar-bg .bar{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: red;
+}
+
+/* footer */
+footer{
+    background-color: #fffaef;
+    min-height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer p {
+    line-height: 3rem;
+}
